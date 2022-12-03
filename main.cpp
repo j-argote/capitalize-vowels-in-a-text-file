@@ -7,11 +7,14 @@ using namespace std;
 int main(){
   ifstream inFS;
   ofstream outFS;
-  string word;
+  string word, textFile;
   vector<char> vowels{'a', 'e', 'i', 'o', 'u'};
 
+  //read in a string; which is the text file use want to open
+  cin >> textFile;
+
   //open text file to read
-  inFS.open("string4.txt");
+  inFS.open(textFile);
   if(!inFS.is_open()){
     cout << "could not open read file." << endl;
     return 1;
